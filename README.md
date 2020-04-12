@@ -1,8 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Quick React Site
 
-In the project directory, you can run:
+To start the project directory:
 
 ### `npm start`
 
