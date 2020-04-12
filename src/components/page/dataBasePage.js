@@ -5,23 +5,26 @@ class DataBasePage extends Component{
   constructor(){
     super();
     this.state = {
-      customers: []
+      users: []
     }
   }
 
+  // Calls localhost:5000
+  // Pulls data from mysql
   componentDidMount(){
     fetch('/api/data')
     .then(res => res.json())
-    .then(customers => this.setState({customers}, () => console.log('Customers fetched..',
-    customers)));
+    .then(users => this.setState({users}, () => console.log('Customers fetched..',
+    users)));
   }
   render(){
+    // Displays the mysql data
     return(
-      <div>
-        <h2 id='title'>Customers</h2>
-        <ul>
-          { this.state.customers.map(customer =>
-          <li key={customer.id}>{customer.user} {customer.status}</li>
+      <div id="top">
+        <h1 align="center">Users</h1>
+        <ul id="top">
+          { this.state.users.map(users =>
+          <li key={users.id}><font size="+2"><b>{users.id}</b> &nbsp; {users.user} &nbsp;  {users.status}</font></li>
             )}
             </ul>
       </div>

@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Site
 
-## Available Scripts
+For this repo, it is broken up into two halves: elyah and react express.
 
-In the project directory, you can run:
 
-### `npm start`
+UI was developed on Reactjs. 
+Backend was developed with VS code and MySQL paired together. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+There are a total of 3 pages.
+There is a heard for easy access to the different pages.
+First page is the "home page" where I added a sticky header and a large amount of text to show that I removed the scroll bar.
+Second page is the "extra page" where I placed an interactive graph that changes appearance based on key events. Futher explaination will be on that page.
+Third page is the "database page" where all the information stored inside mysql db is displayed. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## reactexpress
 
-### `npm run build`
+The "reactexpress" folder is for communicating with a mysql database and this is the first package that should be run before executing the main package. If you don't mind not seeing a working 3rd page then skip over to "elyah" instructions.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get started make sure the following is setup:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Assuming mysql is not already installed. Go to https://dev.mysql.com/downloads/mysql/.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1) Create a mysql server with your instance set to "localhost:3306".
+2) Make sure your user credentials are both set to "admin".
+(Note: look at elyah/reactexpress/server.js to verify what the setup should look like)
+3) Once the setup is complete go to Server => Data Import => Select "expressCollection.sql" and "select tables" button.
+4) Press "Start Import" and on the left hand side verify that "collection" schema and "data" table exist. They should be prepopulted for you.
+5) Make sure you have npm/yarn installed. If so, then you should be able to install "nodemon".
+6) Go into "elyah/reactexpress/".
+7) Execute command "npm install -g nodemon" to install "nodemon". 
+8) Execute "nodemon server.js" and you should now have the database setup.
 
-### `npm run eject`
+## elyah
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1) Assuming you already have npm installed just run the command "npm start" inside "elyah/elyah/" path.

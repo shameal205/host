@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
+import '../../index.css';
 
 const Styles = styled.div`
     .navbar {
@@ -16,8 +17,9 @@ const Styles = styled.div`
     }
 `;
 
+// Links to the different pages.
 export const Header = () => (
-    <Styles>
+    <Styles id='header'>
         <Navbar expand="lg">
             <Navbar.Brand href="/"> Elyah</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

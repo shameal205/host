@@ -1,6 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { AppCss } from './App.js'
 import Header from './components/header/header';
 import HomePage from './components/page/homePage';
 import ExtraPage from './components/page/extraPage';
@@ -9,7 +8,7 @@ import Layout from './components/layout/layout.js';
 
 
 class App extends Component {
-
+  // Renders the general page layout: header and body
   render() {
     return (
       <React.Fragment>

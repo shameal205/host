@@ -7,33 +7,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
+
+/* Remove scrollbar*/
 ::-webkit-scrollbar {
-  width: 0px;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+
+  width: 0px;  
+  background: transparent;  
 }
 #graph {
+
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
+  padding-top: 100px;;
+
 }
 code {
+
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 title {
+
   margin: auto;
   padding: 0;
-
 }
+
+#top{
+
+  padding-top: 100px;;
+}
+
+#dataExplain{
+
+  margin-left: auto;
+}
+
+#header{
+
+  width: 100%;
+  position: fixed;
+}
+
 ul {
+
   list-style: none;
   margin: auto;
   width: 30%;
-  padding: 0;
-
 }
+
 li {
+
   font-size: 1.3rem;
   line-height: 2rem;
-  border-bottom:1px dotted #777;
+  border-bottom: 1px dotted #777;
+  margin: 0 0 20px 0;
+
 }
